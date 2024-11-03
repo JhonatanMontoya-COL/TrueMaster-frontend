@@ -1,1 +1,1 @@
-Hola
+Aqui estan algunos de los cambios y nuevas cosas que voy aprendiendo a lo largo de el aprendizaje de Vuejs
