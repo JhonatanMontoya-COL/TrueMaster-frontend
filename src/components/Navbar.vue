@@ -1,6 +1,8 @@
 <template>
     <el-menu
       :default-active="activeIndex"
+      background-color="black"
+      text-color="white"
       class="el-menu-demo"
       mode="horizontal"
       :ellipsis="false"
@@ -8,16 +10,16 @@
     >
       <el-menu-item index="0">
         <img
-          style="width: 60px"
-          src="/Images/TrueMaster_Logo.jpg"
+          style="width: 180px;"
+          src="/Images/truemaster.jpg"
           alt="Logo TrueMaster"
         />
       </el-menu-item>
       <el-sub-menu index="1">
         <template #title><el-icon><user/></el-icon>Jhonatan Montoya</template>
         <el-menu-item index="2-1"><el-icon><user/></el-icon>Perfil</el-menu-item>
-        <el-menu-item index="2-1"><el-icon><BellFilled/></el-icon>Reporte de bugs</el-menu-item>
-        <el-menu-item index="2-2"><el-icon><Close/></el-icon>Cerrar Sesión</el-menu-item>
+        <el-menu-item index="2-2"><el-icon><BellFilled/></el-icon>Reporte de bugs</el-menu-item>
+        <el-menu-item index="2-3"><el-icon><Close/></el-icon>Cerrar Sesión</el-menu-item>
       </el-sub-menu>
     </el-menu>
   </template>
@@ -31,9 +33,5 @@
     console.log(key, keyPath)
   }
   </script>
-  
   <style>
-  .el-menu--horizontal > .el-menu-item:nth-child(1) {
-    margin-right: auto;
-  }
   </style>

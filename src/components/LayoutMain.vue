@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar.vue';
 import Sidebar from '../components/SidebarMenu.vue';
 
 
+
 </script>
 
 <template>
@@ -19,13 +20,12 @@ import Sidebar from '../components/SidebarMenu.vue';
         </el-main>
     </el-container>
 </el-container> 
+
 </template>
   
 
-<style scoped>
+<style>
 
-.el-container{
-    flex: 1;
-    display: flex;
-}
+
+
 </style>

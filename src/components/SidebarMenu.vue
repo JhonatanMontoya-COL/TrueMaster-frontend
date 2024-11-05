@@ -1,59 +1,79 @@
 <template>
-    <el-container class="layout-container-demo" style="height: 500px">
-      <el-aside width="200px">
-        <el-scrollbar>
-          <el-menu :default-openeds="['1', '3']">
+  <el-row class="tac">
+    <el-col :span="12">
+      <el-menu
+        active-text-color="yellow"
+        background-color="black"
+        class="el-menu-vertical-demo"
+        default-active="1"
+        text-color="white"
+        @open="handleOpen"
+        @close="handleClose"
+      >
+      <!--- Esta es la parte correspondiente a el primer sidebar ---->
+        <el-sub-menu index="1">
+          <template #title>
+            <el-icon><location /></el-icon>
+            <span>Personas</span>
+          </template>
+
+          <el-sub-menu index="1-1">
+            <template #title>Informacion</template>
+            <el-menu-item index="1-4-1">Presidentes</el-menu-item>
+            <el-menu-item index="1-4-1">Gerentes Regionales</el-menu-item>
+            <el-menu-item index="1-4-1">Gerentes Zonales</el-menu-item>
+            <el-menu-item index="1-4-1">Gerentes de Oficina</el-menu-item>
+            <el-menu-item index="1-4-1">Directores de oficina</el-menu-item>
+            <el-menu-item index="1-4-1">Asesores de Oficina</el-menu-item>
+          </el-sub-menu>
+
+          <el-sub-menu index="1-2">
+            <template #title>Contactos</template>
+            <el-menu-item index="1-4-1">Presidentes</el-menu-item>
+            <el-menu-item index="1-4-1">Gerentes Regionales</el-menu-item>
+            <el-menu-item index="1-4-1">Gerentes Zonales</el-menu-item>
+            <el-menu-item index="1-4-1">Gerentes de Oficina</el-menu-item>
+            <el-menu-item index="1-4-1">Directores de oficina</el-menu-item>
+            <el-menu-item index="1-4-1">Asesores de Oficina</el-menu-item>
+          </el-sub-menu>
+        </el-sub-menu>
+
+        <!--- Esta es la parte correspondiente a el primer sidebar ---->
+
+        <el-sub-menu index="2">
+          <template #title>
+            <el-icon><location /></el-icon>
+            <span>Localidades Generales</span>
+          </template>
+          
+          <el-menu-item index="1-1">Paises</el-menu-item>
+          <el-menu-item index="1-2">Regiones</el-menu-item>
+          <el-menu-item index="1-3">Departamentos</el-menu-item>
+          <el-menu-item index="1-4">Municipios</el-menu-item>
+          <el-menu-item index="1-5">Oficinas</el-menu-item>
+        </el-sub-menu>
 
 
-            <el-sub-menu index="1">
-              <template #title>
-                <el-icon><message /></el-icon>Correos
-              </template>
-                <el-menu-item index="1-2"><el-icon><user/></el-icon>Persona</el-menu-item>
-                <el-menu-item index="1-3"><el-icon><List/></el-icon>Cargos</el-menu-item>
-                <el-menu-item index="1-4"><el-icon><MapLocation/></el-icon>Países</el-menu-item>
-            </el-sub-menu>
+      </el-menu>
+    </el-col>
+  </el-row>
+</template>
 
-            
-          </el-menu>
-        </el-scrollbar>
-      </el-aside>
-    </el-container>
-  </template>
-  
-  <script lang="ts" setup>
-  import { ref } from 'vue'
-  import { Menu as IconMenu, Message, Setting , User , MapLocation , List} from '@element-plus/icons-vue'
-  
-  const item = {
-    date: '2016-05-02',
-    name: 'Tom',
-    address: 'No. 189, Grove St, Los Angeles',
-  }
-  const tableData = ref(Array.from({ length: 20 }).fill(item))
-  </script>
-  
-  <style scoped>
-  .layout-container-demo .el-header {
-    position: relative;
-    background-color: var(--el-color-primary-light-7);
-    color: var(--el-text-color-primary);
-  }
-  .layout-container-demo .el-aside {
-    color: var(--el-text-color-primary);
-    background: var(--el-color-primary-light-8);
-  }
-  .layout-container-demo .el-menu {
-    border-right: none;
-  }
-  .layout-container-demo .el-main {
-    padding: 0;
-  }
-  .layout-container-demo .toolbar {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    right: 20px;
-  }
-  </style>
+<script lang="ts" setup>
+import {
+  Document,
+  Menu as IconMenu,
+  Location,
+  Setting,
+} from '@element-plus/icons-vue'
+const handleOpen = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
+const handleClose = (key: string, keyPath: string[]) => {
+  console.log(key, keyPath)
+}
+</script>
+
+<style>
+
+</style>
