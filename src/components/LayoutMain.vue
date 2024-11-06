@@ -7,16 +7,17 @@ import Sidebar from '../components/SidebarMenu.vue';
 </script>
 
 <template>
-<el-container>
+<el-container style="height: 100vh;">
     <el-header>
         <Navbar></Navbar>
     </el-header>
     <el-container>
-        <el-aside>
+        <el-aside width="400px">
             <Sidebar></Sidebar>
         </el-aside>
         <el-main>
-            main
+            <slot name="slotLayout"></slot>
+            <slot name="slotLayout2"></slot>
         </el-main>
     </el-container>
 </el-container> 
@@ -24,8 +25,19 @@ import Sidebar from '../components/SidebarMenu.vue';
 </template>
   
 
-<style>
+<style scoped>
 
+.el-container{
+    flex: 1;
+    display: flex;
 
+}
+.el-header{
+    padding: 0 0px;
+    height: 60;
+}
 
+.el-aside{
+    width: 500px;
+}
 </style>

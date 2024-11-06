@@ -33,5 +33,16 @@
     console.log(key, keyPath)
   }
   </script>
-  <style>
+  <style scoped>
+
+  .el-menu-demo{
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+  }
+
+  .el-menu--horizontal > .el-menu-item:nth-child(1) {
+  margin-right: auto;
+}
   </style>

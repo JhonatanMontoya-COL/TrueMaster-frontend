@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de Empleados'"
-             :titleBtn="'Módulo de Empleados'"
+             :title="'Módulo de Departamentos'"
+             :titleBtn="'Módulo de Departamentos'"
 
              >
               
