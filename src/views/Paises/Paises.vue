@@ -6,7 +6,11 @@
             :titleBtn="'Crear País'"
             >
             </Header>
-            
+            <formulario :titulo="'1'">
+              <template #slotForm>
+                <FormularioPaises></FormularioPaises>
+              </template>
+            </formulario>
             <div class="table">
                 <el-table :data="tableData" stripe style="width: 100%">
                     <el-table-column prop="nombre" label="Nombre" width="180" />
@@ -26,11 +30,13 @@
     </LayoutMain>
 </template>
   
-  <script lang="ts" setup>
+  <script setup>
     import { reactive, ref } from 'vue'
     import Header from '../../components/Header.vue';
     import LayoutMain from '../../components/LayoutMain.vue';
     import {Delete,EditPen} from "@element-plus/icons-vue"
+    import FormularioPaises from "./components/formPaises.vue"
+    import Formulario from "../../components/formulario.vue"
 
   const tableData = [
   {
