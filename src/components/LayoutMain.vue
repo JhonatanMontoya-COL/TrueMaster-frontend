@@ -4,7 +4,7 @@ import Sidebar from '../components/SidebarMenu.vue';
 
 
 
-</script>
+</script >
 
 <template>
 <el-container style="height: 100vh;">
@@ -17,7 +17,6 @@ import Sidebar from '../components/SidebarMenu.vue';
         </el-aside>
         <el-main>
             <slot name="slotLayout"></slot>
-            <slot name="slotLayout2"></slot>
         </el-main>
     </el-container>
 </el-container> 

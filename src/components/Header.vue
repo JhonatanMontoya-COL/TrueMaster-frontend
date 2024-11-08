@@ -3,8 +3,8 @@
       <div class="container_header">
 
         <h2 class="titulo">{{ title }}</h2>
-      <el-row justify="center" align="middle">
-        <el-button type="primary">{{ titleBtn }}</el-button>
+      <el-row justify="center">
+        <el-button type="primary" @click="open">{{ titleBtn }}</el-button>
       </el-row>
       
       </div>
@@ -14,9 +14,14 @@
 
 <script setup>
 defineProps({
+
   title: String,
   titleBtn:String,
-  likes: Number
+  
+  open:{
+    type:Function
+  }
+
 })
 
 

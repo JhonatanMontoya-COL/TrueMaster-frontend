@@ -4,11 +4,17 @@
             <Header   
             :title="'Módulo de Países'"
             :titleBtn="'Crear País'"
+            :open="createForm_101"
             >
             </Header>
-            <formulario :titulo="'1'">
+
+
+
+            <formulario :title="'países'" v-model:createForm_101="showForm_101">
+
+
               <template #slotForm>
-                <FormularioPaises></FormularioPaises>
+                <FormularioPaises></FormularioPaises> 
               </template>
             </formulario>
             <div class="table">
@@ -38,16 +44,29 @@
     import FormularioPaises from "./components/formPaises.vue"
     import Formulario from "../../components/formulario.vue"
 
+
+
+    const showForm_101 = ref(false)
+    
+    const createForm_101 = () =>{
+      showForm_101.value=true
+    }
+
+    /*
+    //prueba para poder cerrar el formulario desde el mismo boton
+    const showHeader_101 = ref(false)
+
+    const switchHeaderStatus_101 = () =>{
+      showForm_101.value=false
+      showHeader_101.value=true
+    }
+    */
+
   const tableData = [
   {
-    nombre: 'Alejandro Montoya',
-    direccion: 'Carrera 56#65-01',
-    telefono: '3505186539',
-  },
-  {
-    nombre: 'Jhonatan Montoya',
-    direccion: 'Calle 65#56-20',
-    telefono: '3113353728',
-  },
+    nombre: 'none',
+    direccion: 'none',
+    telefono: 'none',
+  }
 ]
   </script>

@@ -1,13 +1,15 @@
 <template>
   <el-row class="tac" style="height: 100%;">
     <el-col :span="12" class="sidebar">
-      <el-menu id="sideBar1"
-        active-text-color="yellow"
-        background-color="black"
-        class="el-menu-vertical-demo"
-        default-active="1"
-        text-color="white"
-      >
+      <el-menu 
+      default-active="$router.path"
+      router
+          id="sideBar1"
+          active-text-color="yellow"
+          background-color="black"
+          class="el-menu-vertical-demo"
+          text-color="white"
+        >
       <!--- Esta es la parte correspondiente a el primer sidebar ---->
         <el-sub-menu index="1">
           <template #title>
@@ -49,7 +51,7 @@
           
           <el-sub-menu index="1-3">
             <template #title>Localidades</template>
-            <el-menu-item index="1-3-1">Paises</el-menu-item>
+            <el-menu-item index="paises">Paises</el-menu-item>
           <el-menu-item index="1-3-2">Regiones</el-menu-item>
           <el-menu-item index="1-3-3">Departamentos</el-menu-item>
           <el-menu-item index="1-3-4">Municipios</el-menu-item>
