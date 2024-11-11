@@ -16,7 +16,7 @@ import Dptos from '../views/dptos/dptos.vue';
 
 const routes = [
     {
-        path:'/home',
+        path:'/',
         name: 'home',
         component:LayoutMain
     },

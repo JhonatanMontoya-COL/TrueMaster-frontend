@@ -1,28 +1,97 @@
 <template>
-
-    <div class="container_header" v-if="isVisible">
-        <h1 class="title">Módulo de {{ prop.title }}</h1>
-        <el-row justify="center">
-            <el-button type="primary">Cancelar</el-button>
-            <el-button type="primary">Guardar</el-button>
-        </el-row>
+    <el-container v-show="isVisible" class="form-container">
+      <el-row :gutter="5" class="form-container__row">
+        <el-col :xs="18" :sm="18" :md="18" :lg="22" :xl="22" class="form-container__title-col">
+          <el-button text class="form-container__title-button" size="large">
+            {{ title }}
+          </el-button>
+        </el-col>
+        <el-col :xs="6" :sm="6" :md="6" :lg="2" :xl="2" class="form-container__button-group">
+          <el-button size="large" class="form-container__button-cancel" @click="getBack">Cancelar</el-button>
+          <el-button type="primary" size="large" class="form-container__button-submit" @click="submit">
+           {{titleButtonForm_001}}
+          </el-button>
+        </el-col>
+      </el-row>
+  
+      <el-main class="form-container__main">
         <slot name="slotForm"></slot>
-    </div>
-</template>
-
-<script setup>
-
-import { computed, ref } from 'vue';
- 
-const prop = defineProps({
-  title: String,
-  createForm_101: Boolean,
-})
-
-const isVisible = computed(()=> prop.createForm_101 );
-
-</script>
-
-<style scoped>
-
-</style>
+      </el-main>
+    </el-container>
+  </template>
+  
+  <script setup>
+  import { computed } from 'vue';
+  
+  const prop = defineProps({
+    title: String,
+    isEdit: Boolean,
+    isOpen: Boolean,
+  });
+  
+  console.log(prop.isEdit)
+  const titleButtonForm_001 = computed(()=>(prop.isEdit ? 'Actualizar': 'Guardar'))
+  
+  const isVisible = computed(() => prop.isOpen);
+  
+  const $emit = defineEmits(['update:is-open','save' ,'update']);
+  
+  const getBack = ()  => {
+    $emit('update:is-open', false);
+  };
+  
+  const submit=()=>{
+    if(prop.isEdit){
+      $emit('update')
+    }else{
+      $emit('save')
+    }
+  }
+  
+  </script>
+  
+  <style scoped>
+  .form-container {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 5px;
+    width: 100%;
+    z-index: 90;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh + 42%);
+  }
+  
+  
+  
+  .form-container__row {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  /* estilos del titulo delformulario  */
+  .form-container__title-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  
+  /* alinear los botones en la parte soperior derecha */
+  .form-container__button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .form-container__button-submit {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+  }
+  
+  
+  </style>

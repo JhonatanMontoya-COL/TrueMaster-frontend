@@ -7,36 +7,38 @@ import Sidebar from '../components/SidebarMenu.vue';
 </script >
 
 <template>
+
 <el-container style="height: 100vh;">
     <el-header>
         <Navbar></Navbar>
     </el-header>
+
+
     <el-container>
-        <el-aside width="400px">
+        <el-aside width="auto">
             <Sidebar></Sidebar>
         </el-aside>
-        <el-main>
+        <el-main class="main-content">
             <slot name="slotLayout"></slot>
         </el-main>
     </el-container>
+
+
 </el-container> 
 
 </template>
   
 
 <style scoped>
-
-.el-container{
-    flex: 1;
-    display: flex;
-
-}
 .el-header{
-    padding: 0 0px;
-    height: 60;
+    padding: 0;
 }
 
 .el-aside{
-    width: 500px;
+    background-color: #13161c;
+}
+
+.main-content{
+    position: relative;
 }
 </style>

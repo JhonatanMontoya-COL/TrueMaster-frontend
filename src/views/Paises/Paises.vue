@@ -2,24 +2,25 @@
     <LayoutMain>
         <template #slotLayout>
             <Header   
-            :title="'Módulo de Países'"
-            :titleBtn="'Crear País'"
-            :open="createForm_101"
-            >
-            </Header>
+            :title="'Países'"
+            :titleButton_001="'Crear País'"
+            :isOpen="openForm_101"
+            ></Header>
 
-
-
-            <formulario :title="'países'" v-model:createForm_101="showForm_101">
-
-
+          <Formulario :titulo="'Gestion de Paises'" v-model:is-open="show_101" :is-edit="edit_101">
               <template #slotForm>
-                <FormularioPaises></FormularioPaises> 
+                  <el-row :gutter="20">
+                  <el-col :xs="24" :sm="24" :md="24" :lg="24" :xl="24">
+                  <FormularioPaises   
+                  v-model:is-open="show_101" :is-edit="edit_101"  
+                  />
+                  </el-col>
+                  </el-row>
               </template>
-            </formulario>
-            <div class="table">
-                <el-table :data="tableData" stripe style="width: 100%">
-                    <el-table-column prop="nombre" label="Nombre" width="180" />
+          </formulario>
+              <div class="table" id="table">
+                <el-table :data="tableData" stripe style="width: 100%;color: #13161c;">
+                    <el-table-column id="col1" prop="nombre" label="Nombre" width="180"/>
                     <el-table-column prop="direccion" label="dirección" width="180" />
                     <el-table-column prop="telefono" label="Teléfono" />
                     <el-table-column fixed="right" label="Operations" min-width="120">
@@ -38,31 +39,48 @@
   
   <script setup>
     import { reactive, ref } from 'vue'
+    import Formulario from "../../components/formulario.vue";
     import Header from '../../components/Header.vue';
     import LayoutMain from '../../components/LayoutMain.vue';
     import {Delete,EditPen} from "@element-plus/icons-vue"
     import FormularioPaises from "./components/formPaises.vue"
-    import Formulario from "../../components/formulario.vue"
+  import { darken } from 'element-plus/es/components/button/src/button-custom.mjs';
 
 
 
-    const showForm_101 = ref(false)
+    const show_101 = ref(false)
+    const edit_101 = ref(false)
     
-    const createForm_101 = () =>{
-      showForm_101.value=true
+    const openForm_101 = () =>{
+      show_101.value=true
+      edit_101.value=false
     }
-
-    /*
-    //prueba para poder cerrar el formulario desde el mismo boton
-    const showHeader_101 = ref(false)
-
-    const switchHeaderStatus_101 = () =>{
-      showForm_101.value=false
-      showHeader_101.value=true
+    const editForm_101 = () =>{
+      show_101.value=true
+      edit_101.value=true
     }
-    */
 
   const tableData = [
+  {
+    nombre: 'Alejandro Montoya',
+    direccion: 'ASDASDASD3434',
+    telefono: '4242342',
+  },
+  {
+    nombre: 'Jhonatan Montoya',
+    direccion: 'fafdfs',
+    telefono: '424234',
+  },
+  {
+    nombre: 'Nataly Montoya',
+    direccion: 'sdfsdf',
+    telefono: '423423',
+  },
+  {
+    nombre: 'Luz Mary Martinez',
+    direccion: 'adasd',
+    telefono: '234',
+  },
   {
     nombre: 'none',
     direccion: 'none',
@@ -70,3 +88,8 @@
   }
 ]
   </script>
+
+<style scoped>
+
+
+</style>

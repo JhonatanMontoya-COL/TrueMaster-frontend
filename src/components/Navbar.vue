@@ -1,7 +1,7 @@
 <template>
     <el-menu
       :default-active="activeIndex"
-      background-color="black"
+      background-color="#fff"
       text-color="white"
       class="el-menu-demo"
       mode="horizontal"
@@ -11,10 +11,11 @@
       <el-menu-item index="0">
         <img
           style="width: 180px;"
-          src="/Images/truemaster.jpg"
+          src=""
           alt="Logo TrueMaster"
         />
       </el-menu-item>
+      <h1 style="color: white; display: flex; justify-content: center; align-items: center; margin-right:auto;">TrueMaster</h1>
       <el-sub-menu index="1">
         <template #title><el-icon><user/></el-icon>Jhonatan Montoya</template>
         <el-menu-item index="2-1"><el-icon><user/></el-icon>Perfil</el-menu-item>
@@ -34,8 +35,9 @@
   }
   </script>
   <style scoped>
-
   .el-menu-demo{
+    background-color: #13161c;
+    border-color: white;
     position: relative;
     top: 0;
     width: 100%;
@@ -44,5 +46,5 @@
 
   .el-menu--horizontal > .el-menu-item:nth-child(1) {
   margin-right: auto;
-}
+  }
   </style>
