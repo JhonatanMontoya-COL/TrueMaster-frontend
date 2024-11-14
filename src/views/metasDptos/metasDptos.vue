@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de las metas de los departamentos'"
-             :titleBtn="'Módulo de las metas de los departamentos'"
+             :titulo="'las metas de departamentos'"
+             :tituloBoton="'Crear meta de departamentos'"
 
              >
               

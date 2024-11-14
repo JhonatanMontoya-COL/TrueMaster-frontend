@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de las Regiones'"
-             :titleBtn="'Módulo de las Regiones'"
+             :titulo="'Regiones'"
+             :tituloBoton="'Crear Regiones'"
 
              >
               

@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de Departamentos'"
-             :titleBtn="'Módulo de Departamentos'"
+             :titulo="'Departamentos'"
+             :tituloBoton="'Crear Departamento'"
 
              >
               

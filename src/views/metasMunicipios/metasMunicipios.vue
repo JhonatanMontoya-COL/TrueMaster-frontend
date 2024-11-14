@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de las metas de los Municipios'"
-             :titleBtn="'Módulo de las metas de los Municipios'"
+             :titulo="'Metas Municipios'"
+             :tituloBoton="'Crear meta de Municipios'"
 
              >
               

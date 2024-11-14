@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de los municipios'"
-             :titleBtn="'Módulo de los municipios'"
+             :titulo="'Municipios'"
+             :tituloBoton="'Crear Municipio'"
 
              >
               

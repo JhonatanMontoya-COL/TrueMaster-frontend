@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de las Oficinas'"
-             :titleBtn="'Módulo de las Oficinas'"
+             :titulo="'Oficinas'"
+             :tituloBoton="'Crear Oficina'"
 
              >
               

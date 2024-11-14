@@ -2,8 +2,8 @@
     <LayoutMain>
         <template #slotLayout>
             <Header  
-             :title="'Módulo de Cargos'"
-             :titleBtn="'Módulo de Cargos'"
+             :titulo="'Cargos'"
+             :tituloBoton="'Crear Cargo'"
 
              >
               
