@@ -44,7 +44,7 @@ defineProps({
 .container_title{
   margin-left: auto;
   margin-right: auto;
-  color: rgb(255, 255, 255);
+  color: #13161c;
 }
 
 

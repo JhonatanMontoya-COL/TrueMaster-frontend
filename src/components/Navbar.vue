@@ -18,9 +18,9 @@
       <h1 style="color: white; display: flex; justify-content: center; align-items: center; margin-right:auto;">TrueMaster</h1>
       <el-sub-menu index="1">
         <template #title><el-icon><user/></el-icon>Jhonatan Montoya</template>
-        <el-menu-item index="2-1"><el-icon><user/></el-icon>Perfil</el-menu-item>
-        <el-menu-item index="2-2"><el-icon><BellFilled/></el-icon>Reporte de bugs</el-menu-item>
-        <el-menu-item index="2-3"><el-icon><Close/></el-icon>Cerrar Sesión</el-menu-item>
+        <el-menu-item id="navbarIcon1" index="2-1"><el-icon><user/></el-icon>Perfil</el-menu-item>
+        <el-menu-item id="navbarIcon2" index="2-2"><el-icon><BellFilled/></el-icon>Reporte de bugs</el-menu-item>
+        <el-menu-item id="navbarIcon3" index="2-3"><el-icon><Close/></el-icon>Cerrar Sesión</el-menu-item>
       </el-sub-menu>
     </el-menu>
   </template>
@@ -37,12 +37,25 @@
   <style scoped>
   .el-menu-demo{
     background-color: #13161c;
-    border-color: white;
+    border-color: rgb(89, 0, 255);
     position: relative;
     top: 0;
     width: 100%;
     z-index: 10;
   }
+
+  #navbarIcon1 {
+background-color: #13161c;
+  }
+
+  #navbarIcon2 {
+background-color: #13161c;
+  }
+
+  #navbarIcon3 {
+background-color: #13161c;
+  }
+
 
   .el-menu--horizontal > .el-menu-item:nth-child(1) {
   margin-right: auto;
