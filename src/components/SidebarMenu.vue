@@ -45,6 +45,6 @@ html, body{
   background-color: #13161c;
   width: fit-content;
   min-height: 100%;
-  border-color: white;
+  border-color: #8000ff;
 }
 </style>

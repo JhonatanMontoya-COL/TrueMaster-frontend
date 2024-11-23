@@ -8,7 +8,7 @@
         </el-col>
         <el-col :xs="6" :sm="6" :md="6" :lg="2" :xl="2" class="form-container__button-group">
           <el-button size="large" class="form-container__button-cancel" @click="irAtras">Cancelar</el-button>
-          <el-button color="#8000ff" size="large" class="form-container_button-submit" @click="submit" >Guardar</el-button>
+          <el-button color="#8000ff" size="large" class="form-container_button-submit" @click="submit" >{{tituloBoton}}</el-button>
           
         </el-col>
       </el-row>
@@ -34,7 +34,7 @@
   
   const isVisible = computed(() => propiedad.isOpen);
   
-  const $emit = defineEmits(['update:is-open','save' ,'update']);
+  const $emit = defineEmits(['update:is-open','save' ,'update:is-edit']);
   
   const irAtras = ()  => {
     $emit('update:is-open', false);

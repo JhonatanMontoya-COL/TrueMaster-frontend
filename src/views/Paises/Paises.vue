@@ -46,11 +46,11 @@
     import {Delete,Edit} from "@element-plus/icons-vue"
 
     const mostrarFormulario = ref(false)
-    /*const editandoFormulario = ref(false)*/
+    const editandoFormulario = ref(false)
     
-    const abrirFormulario = () =>{
+    const abrirFormulario = async() =>{
       mostrarFormulario.value=true
-      //editandoFormulario.value=false
+      editandoFormulario.value=false
     }
     const editarFormulario = () =>{
       mostrarFormulario.value=true
@@ -59,15 +59,10 @@
 
   const tableData = [
   {
-    name: 'Alejandro Montoya',
-    address: 'ASDASDASD3434',
-    phone: '4242342',
+    name: 'none',
+    address: 'none',
+    phone: 'none',
   },
-  {
-    name: 'Jhonatan Montoya',
-    address: 'fafdfs',
-    phone: '424234',
-  }
 ]
   </script>
 
