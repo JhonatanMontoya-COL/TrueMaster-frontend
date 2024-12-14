@@ -11,7 +11,7 @@
         <el-sub-menu index="1">
           <template #title>
             <el-icon><User /></el-icon>
-            <span>Personas</span>
+            <span>Contacto</span>
           </template>
 
           <el-sub-menu index="1-1">

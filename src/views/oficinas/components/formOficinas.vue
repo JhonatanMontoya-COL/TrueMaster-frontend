@@ -10,26 +10,18 @@
       :size="formSize"
       status-icon
     >
-      <el-form-item label="Nombre del país" prop="name">
+      <el-form-item label="Nombre de la oficina" prop="name">
         <el-input v-model="ruleForm.name" />
       </el-form-item>
 
-      
-      <el-form-item label="Prefijo del país" prop="prefijo">
-        <el-select v-model="ruleForm.prefijo" placeholder="Lista de países habilitados">
-          <el-option label="+1" value="Estados Unidos" />
-          <el-option label="+57" value="Colombia" />
-          <el-option label="+52" value="México" />
-        </el-select>
-      </el-form-item>
-      
-      <el-form-item label="Código del país" prop="code">
+      <el-form-item label="Código de la oficina" prop="code">
         <el-input v-model="ruleForm.code" />
       </el-form-item>
+      
 
       <el-form-item style="display: flex; margin-left: 250px; margin-right: auto;">
         <el-button color="#8000ff" @click="submitForm(ruleFormRef)">
-          Crear país
+          Crear Oficina
         </el-button>
         <el-button @click="resetForm(ruleFormRef)">Resetear</el-button>
       </el-form-item>

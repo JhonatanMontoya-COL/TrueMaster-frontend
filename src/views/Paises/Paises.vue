@@ -38,12 +38,13 @@
 </template>
   
   <script setup>
-    import { reactive, ref } from 'vue'
+
+    import { onMounted, reactive, ref } from 'vue'
     import LayoutMain from '../../components/LayoutMain.vue';
     import Formulario from "../../components/formulario.vue";
     import FormularioPaises from "./components/formPaises.vue"
     import Header from '../../components/Header.vue';
-    import {Delete,Edit} from "@element-plus/icons-vue"
+    import {Delete,Edit, Loading} from "@element-plus/icons-vue"
 
     const mostrarFormulario = ref(false)
     const editandoFormulario = ref(false)

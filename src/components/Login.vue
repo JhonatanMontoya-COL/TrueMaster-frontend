@@ -4,7 +4,7 @@
 
 <template>
 <h1>Login</h1>
-<p>Pagina de Login Mac</p>
+<p>Inicio</p>
 </template>
 
 <style>
